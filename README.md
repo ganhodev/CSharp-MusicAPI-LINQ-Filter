@@ -1,4 +1,4 @@
-﻿CSharp-MusicAPI-Consumer-LINQ-Filter
+﻿CSharp-MusicAPI-LINQ-Filter
 
 Descrição do Projeto
 
@@ -63,7 +63,7 @@ Clone o repositório:
 Bash
 
 
-git clone https://github.com/ganhodev/CSharp-MusicAPI-Consumer-LINQ-Filter.git
+git clone https://github.com/ganhodev/CSharp-MusicAPI-LINQ-Filter.git
 
 
 
