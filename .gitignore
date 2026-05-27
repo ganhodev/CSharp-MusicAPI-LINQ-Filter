@@ -1,0 +1,25 @@
+﻿# Pastas de compilação (Arquivos gerados pelo VS)
+[Bb]in/
+[Oo]bj/
+
+# Configurações locais do Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+# Configurações do VS Code
+.vscode/
+
+# Arquivos de sistema (Windows)
+Thumbs.db
+Desktop.ini
+
+# Pacotes NuGet (O VS baixa eles de novo se precisar)
+packages/
+*.nupkg
+
+# Logs e arquivos temporários
+*.log
+[Ll]og/
