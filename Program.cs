@@ -14,13 +14,14 @@ using (HttpClient client = new HttpClient())
         //ele recebe uma parte e já passa para a próxima instrução.
         var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
         //Ao adicionar o ! no final, garante que o resultado do Deserialize não vai ser nulo".
-        LinqFilter.FiltrarTodosOsGenerosMusicais(musicas);
+        LinqFilter.FiltrarTodosOsGenerosMusicais(musicas); //1° método.
         //Um filtro é um mecanismo que seleciona ou organiza dados de acordo com critérios específicos.
         //criei a classe LinqFilter justamente para isso: aplicar filtros na minha lista
         //de músicas. O primeiro filtro que desenvolvi foi FiltrarTodosOsGenerosMusicais(),
         //que pega todos os gêneros únicos da lista e os exibe.
-        LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
-        LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "rock");
+        LinqOrder.ExibirListaDeArtistasOrdenados(musicas); //2° método.
+        LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "rock");// 3° método.
+        LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Michel Teló");// 4° método.
     }
     catch (Exception ex)
     {
