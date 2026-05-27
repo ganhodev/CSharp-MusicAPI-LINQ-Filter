@@ -19,6 +19,7 @@ using (HttpClient client = new HttpClient())
         //criei a classe LinqFilter justamente para isso: aplicar filtros na minha lista
         //de músicas. O primeiro filtro que desenvolvi foi FiltrarTodosOsGenerosMusicais(),
         //que pega todos os gêneros únicos da lista e os exibe.
+        LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
 
     }
     catch (Exception ex)
