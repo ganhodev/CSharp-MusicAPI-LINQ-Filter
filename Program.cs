@@ -20,7 +20,7 @@ using (HttpClient client = new HttpClient())
         //de músicas. O primeiro filtro que desenvolvi foi FiltrarTodosOsGenerosMusicais(),
         //que pega todos os gêneros únicos da lista e os exibe.
         LinqOrder.ExibirListaDeArtistasOrdenados(musicas);
-
+        LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "rock");
     }
     catch (Exception ex)
     {
