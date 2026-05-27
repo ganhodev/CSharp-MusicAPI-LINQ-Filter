@@ -63,7 +63,7 @@ Clone o repositório:
 Bash
 
 
-git clone https://github.com/seu-usuario/CSharp-MusicAPI-Consumer-LINQ-Filter.git
+git clone https://github.com/ganhodev/CSharp-MusicAPI-Consumer-LINQ-Filter.git
 
 
 
@@ -107,5 +107,4 @@ dotnet run
 
 Evolução do Projeto
 
-Este repositório será atualizado conforme o progresso das aulas, com novos exercícios, funcionalidades e filtros LINQ sendo adicionados. Sinta-se à vontade para acompanhar os commits e explorar as diferentes etapas de aprendizado.
-
+Este repositório será atualizado conforme o progresso das aulas, com novos exercícios, funcionalidades e filtros LINQ sendo adicionados.
