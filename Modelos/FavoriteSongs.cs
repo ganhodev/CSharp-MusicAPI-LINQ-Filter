@@ -39,6 +39,7 @@ internal class FavoriteSongs
 
         //criando um arquivo json.
         File.WriteAllText(nomeDoArquivo, json);
-        Console.WriteLine("O arquivo Json foi criado com sucesso");
+        //Path.GetFullPath, retorna o caminho completo de um arquivo ou pasta.
+        Console.WriteLine($"O arquivo Json foi criado com sucesso! {Path.GetFullPath(nomeDoArquivo)}");
     }
 }
