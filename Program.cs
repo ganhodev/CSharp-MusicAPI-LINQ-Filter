@@ -23,14 +23,13 @@ using (HttpClient client = new HttpClient())
         //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "rock");// 3° método.
         //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Michel Teló");// 4° método.
 
-        var musicasFavoritasDoGanho = new FavoriteSongs("Ganho");
-        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[1]);
-        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[2]);
-        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[3]);
-        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[4]);
-        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[5]);
+        //var musicasFavoritasDoGanho = new FavoriteSongs("Ganho");
+        //musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[1]);
+        //musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[2]);
+        //musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[3]);
+        //musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[4]);
+        //musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[5]);
 
-        musicasFavoritasDoGanho.ExibirMusicasFavoritas();
 
         var musicasFavoritasDoGuilherme = new FavoriteSongs("Guilherme");
         musicasFavoritasDoGuilherme.AdicionarMusicasFavoritas(musicas[532]);
@@ -40,6 +39,7 @@ using (HttpClient client = new HttpClient())
         musicasFavoritasDoGuilherme.AdicionarMusicasFavoritas(musicas[92]);
 
         musicasFavoritasDoGuilherme.ExibirMusicasFavoritas();
+        musicasFavoritasDoGuilherme.GerarArquivoJson();
     }
     catch (Exception ex)
     {
