@@ -14,14 +14,32 @@ using (HttpClient client = new HttpClient())
         //ele recebe uma parte e já passa para a próxima instrução.
         var musicas = JsonSerializer.Deserialize<List<Musica>>(resposta)!;
         //Ao adicionar o ! no final, garante que o resultado do Deserialize não vai ser nulo".
-        LinqFilter.FiltrarTodosOsGenerosMusicais(musicas); //1° método.
+        //LinqFilter.FiltrarTodosOsGenerosMusicais(musicas); //1° método.
         //Um filtro é um mecanismo que seleciona ou organiza dados de acordo com critérios específicos.
         //criei a classe LinqFilter justamente para isso: aplicar filtros na minha lista
         //de músicas. O primeiro filtro que desenvolvi foi FiltrarTodosOsGenerosMusicais(),
         //que pega todos os gêneros únicos da lista e os exibe.
-        LinqOrder.ExibirListaDeArtistasOrdenados(musicas); //2° método.
-        LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "rock");// 3° método.
-        LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Michel Teló");// 4° método.
+        //LinqOrder.ExibirListaDeArtistasOrdenados(musicas); //2° método.
+        //LinqFilter.FiltrarArtistasPorGeneroMusical(musicas, "rock");// 3° método.
+        //LinqFilter.FiltrarMusicasDeUmArtista(musicas, "Michel Teló");// 4° método.
+
+        var musicasFavoritasDoGanho = new FavoriteSongs("Ganho");
+        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[1]);
+        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[2]);
+        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[3]);
+        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[4]);
+        musicasFavoritasDoGanho.AdicionarMusicasFavoritas(musicas[5]);
+
+        musicasFavoritasDoGanho.ExibirMusicasFavoritas();
+
+        var musicasFavoritasDoGuilherme = new FavoriteSongs("Guilherme");
+        musicasFavoritasDoGuilherme.AdicionarMusicasFavoritas(musicas[532]);
+        musicasFavoritasDoGuilherme.AdicionarMusicasFavoritas(musicas[512]);
+        musicasFavoritasDoGuilherme.AdicionarMusicasFavoritas(musicas[56]);
+        musicasFavoritasDoGuilherme.AdicionarMusicasFavoritas(musicas[21]);
+        musicasFavoritasDoGuilherme.AdicionarMusicasFavoritas(musicas[92]);
+
+        musicasFavoritasDoGuilherme.ExibirMusicasFavoritas();
     }
     catch (Exception ex)
     {
